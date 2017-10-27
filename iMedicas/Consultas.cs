@@ -66,5 +66,27 @@ namespace iMedicas
 
 
         }
+
+        public void Insertar(string id, string nombre, string telefono, string direccion, string email)
+        {
+            SqlCommand cmd = new SqlCommand("insert into Cliente (Id_Cliente, Nombre_Cliente,Telefono,Direccion,Email) values (@Id_Cliente,@Nombre_Cliente,@Telefono,@Direccion,@Email)", conexion);
+            cmd.Parameters.Add("@Id_Cliente",System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@Nombre_Cliente", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Telefono", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Direccion", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Email", System.Data.SqlDbType.VarChar);
+
+            cmd.Parameters["@Id_Cliente"].Value = id;
+            cmd.Parameters["@Nombre_Cliente"].Value = nombre;
+            cmd.Parameters["@Telefono"].Value = telefono;
+            cmd.Parameters["@Direccion"].Value = direccion;
+            cmd.Parameters["@Email"].Value = email;
+
+            conexion.Open();
+            int filas = cmd.ExecuteNonQuery();
+
+            conexion.Close();
+
+        }
     }
 }

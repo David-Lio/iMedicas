@@ -1,0 +1,13 @@
+c:\users\david\documents\visual studio 2015\Projects\iMedicas\iMedicas\bin\Debug\iMedicas.exe.config
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\iMedicas.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\iMedicas.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\MetroFramework.Design.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\MetroFramework.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Clientes.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Properties.Resources.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.csproj.GenerateResource.Cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Inicio.resources

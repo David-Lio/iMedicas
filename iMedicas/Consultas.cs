@@ -82,10 +82,38 @@ namespace iMedicas
             cmd.Parameters["@Direccion"].Value = direccion;
             cmd.Parameters["@Email"].Value = email;
 
-            conexion.Open();
-            int filas = cmd.ExecuteNonQuery();
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch(Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+            
 
-            conexion.Close();
+            
+
+        }
+
+        public void Eliminar(string id)
+        {
+
+            try
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand(string.Format("delete from Cliente where Id_Cliente = {0}", id), conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch(Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
 
         }
     }

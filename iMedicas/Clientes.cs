@@ -24,11 +24,13 @@ namespace iMedicas
         private void Clientes_Load(object sender, EventArgs e)
         {
             dgvClientes.DataSource = sql.MostrarDatos();
+            txbId.Text = dgvClientes.Rows.Count.ToString();
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvClientes.Rows[e.RowIndex];
+            txbId.Text = Convert.ToString(fila.Cells[0].Value);
             txbNombre.Text = Convert.ToString(fila.Cells[1].Value);
             txbTelefono.Text =  Convert.ToString(fila.Cells[2].Value);
             txbDireccion.Text = Convert.ToString(fila.Cells[3].Value);
@@ -48,6 +50,22 @@ namespace iMedicas
             catch(Exception ex)
             {
                 MessageBox.Show(this, ex.ToString());
+            }
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if(txbId.Text != "")
+            {
+                sql.Eliminar(txbId.Text);
+                MetroMessageBox.Show(this, "Se elimino la fila");
+                sql.MostrarDatos();
+                dgvClientes.DataSource = sql.MostrarDatos();
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "No se pudo efectuar la eliminacion");
             }
             
         }

@@ -69,6 +69,8 @@ namespace iMedicas
 
         public void Insertar(string id, string nombre, string telefono, string direccion, string email)
         {
+            Crearconexion();
+
             SqlCommand cmd = new SqlCommand("insert into Cliente (Id_Cliente, Nombre_Cliente,Telefono,Direccion,Email) values (@Id_Cliente,@Nombre_Cliente,@Telefono,@Direccion,@Email)", conexion);
             cmd.Parameters.Add("@Id_Cliente",System.Data.SqlDbType.Int);
             cmd.Parameters.Add("@Nombre_Cliente", System.Data.SqlDbType.VarChar);
@@ -101,7 +103,7 @@ namespace iMedicas
 
         public void Eliminar(string id)
         {
-
+            Crearconexion();
             try
             {
                 conexion.Open();
@@ -116,5 +118,18 @@ namespace iMedicas
             }
 
         }
+
+        public DataTable selectSimple(string consulta, string tabla, string condicion ="")
+        {
+            Crearconexion();
+            conexion.Open();
+            SqlDataAdapter ad = new SqlDataAdapter(string.Format("Select {0} from {1} {2}",consulta,tabla,condicion), conexion);
+            SqlCommandBuilder cmd = new SqlCommandBuilder(ad);
+            ds = new DataSet();
+            ad.Fill(ds);
+            conexion.Close();
+            return ds.Tables[0];
+        }
+
     }
 }

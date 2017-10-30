@@ -13,23 +13,25 @@ using MetroFramework.Forms;
 
 namespace iMedicas
 {
-    public partial class Inicio : MetroForm
+    public partial class Cliente : MetroForm
     {
         Consultas sql = new Consultas();
-        public Inicio()
+        public Cliente()
         {
             InitializeComponent();
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
+        private void Cliente_Load(object sender, EventArgs e)
         {
-            Cliente clientes = new Cliente();
-            clientes.Show();
+            cbClientes.DisplayMember = "Nombre_Cliente";
+            cbClientes.ValueMember = "Id_Cliente";
+
+            cbClientes.DataSource = sql.selectSimple("Id_Cliente,Nombre_Cliente","Cliente");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void cbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            sql.PruebaConexion();
+            
         }
     }
 }

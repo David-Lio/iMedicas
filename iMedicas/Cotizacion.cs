@@ -13,10 +13,10 @@ using MetroFramework.Forms;
 
 namespace iMedicas
 {
-    public partial class Cliente : MetroForm
+    public partial class Cotizacion : MetroForm
     {
         Consultas sql = new Consultas();
-        public Cliente()
+        public Cotizacion()
         {
             InitializeComponent();
         }
@@ -31,7 +31,17 @@ namespace iMedicas
 
         private void cbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            string id = cbClientes.SelectedValue.ToString();
+            string tabla = "Cliente";
+            string condicion = "where Id_Cliente =" + id;
+            string telefono = sql.selectDatoSimple("Telefono",tabla,condicion);
+            string direccion = sql.selectDatoSimple("Direccion", tabla, condicion);
+            string email = sql.selectDatoSimple("Email", tabla, condicion);
+
+            txbTelefono.Text = telefono;
+            txbDireccion.Text = direccion;
+            txbEmail.Text = email;
+
         }
     }
 }

@@ -28,16 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnCotizacion = new MetroFramework.Controls.MetroButton();
             this.btnClientes = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
+            // btnCotizacion
+            // 
+            this.btnCotizacion.Location = new System.Drawing.Point(23, 84);
+            this.btnCotizacion.Name = "btnCotizacion";
+            this.btnCotizacion.Size = new System.Drawing.Size(171, 39);
+            this.btnCotizacion.TabIndex = 1;
+            this.btnCotizacion.Text = "Nueva Cotizacion";
+            this.btnCotizacion.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnCotizacion.UseSelectable = true;
+            this.btnCotizacion.Click += new System.EventHandler(this.btnCotizacion_Click);
+            // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(23, 114);
+            this.btnClientes.Location = new System.Drawing.Point(23, 160);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(75, 23);
-            this.btnClientes.TabIndex = 0;
+            this.btnClientes.Size = new System.Drawing.Size(171, 39);
+            this.btnClientes.TabIndex = 2;
             this.btnClientes.Text = "Clientes";
+            this.btnClientes.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnClientes.UseSelectable = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
@@ -47,6 +60,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 328);
             this.Controls.Add(this.btnClientes);
+            this.Controls.Add(this.btnCotizacion);
             this.Name = "Inicio";
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Inicio";
@@ -58,6 +72,7 @@
 
         #endregion
 
+        private MetroFramework.Controls.MetroButton btnCotizacion;
         private MetroFramework.Controls.MetroButton btnClientes;
     }
 }

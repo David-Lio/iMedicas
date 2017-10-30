@@ -24,7 +24,6 @@ namespace iMedicas
         private void Clientes_Load(object sender, EventArgs e)
         {
             dgvClientes.DataSource = sql.MostrarDatos();
-            txbId.Text = dgvClientes.Rows.Count.ToString();
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -39,35 +38,56 @@ namespace iMedicas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string id = dgvClientes.Rows.Count.ToString();
-
-            try
+            if (Validaciones())
             {
-                sql.Insertar(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
-                MetroMessageBox.Show(this, "La Operacion se realizo con exito");
-                dgvClientes.DataSource = sql.MostrarDatos();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(this, ex.ToString());
+                try
+                {
+                    sql.Insertar(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
+                    MetroMessageBox.Show(this, "La Operacion se realizo con exito");
+                    dgvClientes.DataSource = sql.MostrarDatos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this, ex.ToString());
+                }
             }
             
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if(txbId.Text != "")
+            if (true)
             {
-                sql.Eliminar(txbId.Text);
-                MetroMessageBox.Show(this, "Se elimino la fila");
-                sql.MostrarDatos();
-                dgvClientes.DataSource = sql.MostrarDatos();
+                if (txbId.Text != "")
+                {
+                    sql.Eliminar(txbId.Text);
+                    MetroMessageBox.Show(this, "Se elimino la fila");
+                    sql.MostrarDatos();
+                    dgvClientes.DataSource = sql.MostrarDatos();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "No se pudo efectuar la eliminacion");
+                }
+            }
+            
+        }
+
+        public Boolean Validaciones()
+        {
+            if(txbDireccion.Text != "" ||
+                txbEmail.Text != "" ||
+                txbId.Text != "" ||
+                txbNombre.Text != "" ||
+                txbTelefono.Text != "")
+            {
+                return true;
             }
             else
             {
-                MetroMessageBox.Show(this, "No se pudo efectuar la eliminacion");
+                MetroMessageBox.Show(this, "Debes Llenar Todos Los Campos");
+                return false;
             }
-            
         }
     }
 }

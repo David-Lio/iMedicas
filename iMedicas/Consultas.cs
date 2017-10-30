@@ -131,5 +131,17 @@ namespace iMedicas
             return ds.Tables[0];
         }
 
+        public string selectDatoSimple(string consulta, string tabla, string condicion ="")
+        {
+            Crearconexion();
+            string query = string.Format("select {0} from {1} {2}", consulta, tabla, condicion);
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            conexion.Open();
+            string sdr = cmd.ExecuteScalar().ToString();
+            conexion.Close();
+            return sdr;
+        }
+
     }
 }

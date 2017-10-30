@@ -21,15 +21,21 @@ namespace iMedicas
             InitializeComponent();
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            Cliente clientes = new Cliente();
-            clientes.Show();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             sql.PruebaConexion();
+        }
+
+        private void btnCotizacion_Click(object sender, EventArgs e)
+        {
+            Cotizacion cotizacion = new Cotizacion();
+            cotizacion.Show();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            clientes.Show();
         }
     }
 }

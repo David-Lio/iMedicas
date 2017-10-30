@@ -38,6 +38,7 @@ namespace iMedicas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            string id = txbId.Text;
             if (Validaciones())
             {
                 try

@@ -12,3 +12,4 @@ C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.pdb
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Inicio.resources
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Cotizacion.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Login.resources

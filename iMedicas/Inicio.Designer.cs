@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 328);
+            this.ClientSize = new System.Drawing.Size(216, 330);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnCotizacion);
             this.Name = "Inicio";

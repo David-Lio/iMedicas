@@ -23,7 +23,6 @@ namespace iMedicas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            sql.PruebaConexion();
         }
 
         private void btnCotizacion_Click(object sender, EventArgs e)

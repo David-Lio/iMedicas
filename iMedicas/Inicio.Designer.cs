@@ -62,7 +62,6 @@
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnCotizacion);
             this.Name = "Inicio";
-            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Inicio";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form1_Load);

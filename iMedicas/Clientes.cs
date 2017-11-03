@@ -46,6 +46,7 @@ namespace iMedicas
                     sql.Insertar(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
                     MetroMessageBox.Show(this, "La Operacion se realizo con exito");
                     dgvClientes.DataSource = sql.MostrarDatos();
+                    txbDireccion.Text = txbEmail.Text = txbId.Text = txbNombre.Text = txbTelefono.Text = "";
                 }
                 catch (Exception ex)
                 {

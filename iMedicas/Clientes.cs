@@ -43,7 +43,7 @@ namespace iMedicas
             {
                 try
                 {
-                    sql.Insertar(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
+                    sql.InsertarClientes(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
                     MetroMessageBox.Show(this, "La Operacion se realizo con exito");
                     dgvClientes.DataSource = sql.MostrarDatos();
                     txbDireccion.Text = txbEmail.Text = txbId.Text = txbNombre.Text = txbTelefono.Text = "";
@@ -73,6 +73,36 @@ namespace iMedicas
                 }
             }
             
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                if (txbId.Text != "")
+                {
+                    string id = txbId.Text;
+                    if (Validaciones())
+                    {
+                        try
+                        {
+                            sql.ActualizarClientes(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
+                            MetroMessageBox.Show(this, "La Operacion se realizo con exito");
+                            dgvClientes.DataSource = sql.MostrarDatos();
+                            txbDireccion.Text = txbEmail.Text = txbId.Text = txbNombre.Text = txbTelefono.Text = "";
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(this, ex.ToString());
+                        }
+                    }
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "No se pudo efectuar la Actualizacion");
+                }
+            }
+
         }
 
         public Boolean Validaciones()

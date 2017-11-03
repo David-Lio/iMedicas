@@ -30,6 +30,8 @@
         {
             this.btnCotizacion = new MetroFramework.Controls.MetroButton();
             this.btnClientes = new MetroFramework.Controls.MetroButton();
+            this.btnAccesorios = new MetroFramework.Controls.MetroButton();
+            this.btnMicroscopios = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // btnCotizacion
@@ -45,7 +47,7 @@
             // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(23, 160);
+            this.btnClientes.Location = new System.Drawing.Point(23, 156);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(171, 39);
             this.btnClientes.TabIndex = 2;
@@ -54,11 +56,33 @@
             this.btnClientes.UseSelectable = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
+            // btnAccesorios
+            // 
+            this.btnAccesorios.Location = new System.Drawing.Point(247, 156);
+            this.btnAccesorios.Name = "btnAccesorios";
+            this.btnAccesorios.Size = new System.Drawing.Size(171, 39);
+            this.btnAccesorios.TabIndex = 3;
+            this.btnAccesorios.Text = "Accesorios";
+            this.btnAccesorios.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAccesorios.UseSelectable = true;
+            // 
+            // btnMicroscopios
+            // 
+            this.btnMicroscopios.Location = new System.Drawing.Point(247, 84);
+            this.btnMicroscopios.Name = "btnMicroscopios";
+            this.btnMicroscopios.Size = new System.Drawing.Size(171, 39);
+            this.btnMicroscopios.TabIndex = 4;
+            this.btnMicroscopios.Text = "Microscopios";
+            this.btnMicroscopios.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnMicroscopios.UseSelectable = true;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(216, 330);
+            this.ClientSize = new System.Drawing.Size(447, 240);
+            this.Controls.Add(this.btnMicroscopios);
+            this.Controls.Add(this.btnAccesorios);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnCotizacion);
             this.Name = "Inicio";
@@ -73,6 +97,8 @@
 
         private MetroFramework.Controls.MetroButton btnCotizacion;
         private MetroFramework.Controls.MetroButton btnClientes;
+        private MetroFramework.Controls.MetroButton btnAccesorios;
+        private MetroFramework.Controls.MetroButton btnMicroscopios;
     }
 }
 

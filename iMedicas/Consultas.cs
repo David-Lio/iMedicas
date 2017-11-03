@@ -67,7 +67,7 @@ namespace iMedicas
 
         }
 
-        public void Insertar(string id, string nombre, string telefono, string direccion, string email)
+        public void InsertarClientes(string id, string nombre, string telefono, string direccion, string email)
         {
             Crearconexion();
 
@@ -98,6 +98,39 @@ namespace iMedicas
             
 
             
+
+        }
+
+        public void ActualizarClientes(string id, string nombre, string telefono, string direccion, string email)
+        {
+            Crearconexion();
+
+            SqlCommand cmd = new SqlCommand("Update Cliente set Nombre_Cliente = @Nombre_Cliente,Telefono = @Telefono,Direccion = @Direccion,Email = @Email where Id_Cliente ="+id, conexion);
+
+            cmd.Parameters.Add("@Nombre_Cliente", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Telefono", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Direccion", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Email", System.Data.SqlDbType.VarChar);
+
+            cmd.Parameters["@Nombre_Cliente"].Value = nombre;
+            cmd.Parameters["@Telefono"].Value = telefono;
+            cmd.Parameters["@Direccion"].Value = direccion;
+            cmd.Parameters["@Email"].Value = email;
+
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
 
         }
 

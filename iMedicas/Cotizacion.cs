@@ -43,5 +43,11 @@ namespace iMedicas
             txbEmail.Text = email;
 
         }
+
+        private void btnAccesorios_Click(object sender, EventArgs e)
+        {
+            CotizacionAccesorios accesorios = new CotizacionAccesorios();
+            accesorios.Show();
+        }
     }
 }

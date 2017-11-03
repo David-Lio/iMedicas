@@ -36,6 +36,9 @@
             this.txbEmail = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.btnMicroscopios = new MetroFramework.Controls.MetroButton();
+            this.btnAccesorios = new MetroFramework.Controls.MetroButton();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // cbClientes
@@ -183,11 +186,45 @@
             this.metroLabel4.Text = "Selecciona Cliente";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // Cliente
+            // btnMicroscopios
+            // 
+            this.btnMicroscopios.Location = new System.Drawing.Point(23, 200);
+            this.btnMicroscopios.Name = "btnMicroscopios";
+            this.btnMicroscopios.Size = new System.Drawing.Size(103, 30);
+            this.btnMicroscopios.TabIndex = 9;
+            this.btnMicroscopios.Text = "Microscopios";
+            this.btnMicroscopios.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnMicroscopios.UseSelectable = true;
+            // 
+            // btnAccesorios
+            // 
+            this.btnAccesorios.Location = new System.Drawing.Point(23, 236);
+            this.btnAccesorios.Name = "btnAccesorios";
+            this.btnAccesorios.Size = new System.Drawing.Size(103, 30);
+            this.btnAccesorios.TabIndex = 10;
+            this.btnAccesorios.Text = "Accesorios";
+            this.btnAccesorios.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAccesorios.UseSelectable = true;
+            this.btnAccesorios.Click += new System.EventHandler(this.btnAccesorios_Click);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(23, 169);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(105, 19);
+            this.metroLabel5.TabIndex = 11;
+            this.metroLabel5.Text = "Elegir Productos";
+            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 300);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.btnAccesorios);
+            this.Controls.Add(this.btnMicroscopios);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.metroLabel3);
@@ -196,7 +233,7 @@
             this.Controls.Add(this.txbTelefono);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.cbClientes);
-            this.Name = "Cliente";
+            this.Name = "Cotizacion";
             this.Text = "Cotizacion";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Cliente_Load);
@@ -215,5 +252,8 @@
         private MetroFramework.Controls.MetroTextBox txbEmail;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroButton btnMicroscopios;
+        private MetroFramework.Controls.MetroButton btnAccesorios;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }

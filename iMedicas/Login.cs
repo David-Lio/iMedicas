@@ -94,5 +94,6 @@ namespace iMedicas
         {
             sql.PruebaConexion();
         }
+
     }
 }

@@ -56,14 +56,14 @@
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToResizeRows = false;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -76,23 +76,24 @@
             this.dir_cte,
             this.email_cte});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgvClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvClientes.Location = new System.Drawing.Point(20, 145);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -102,7 +103,7 @@
             this.dgvClientes.Size = new System.Drawing.Size(543, 281);
             this.dgvClientes.Style = MetroFramework.MetroColorStyle.Blue;
             this.dgvClientes.TabIndex = 0;
-            this.dgvClientes.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvClientes.Theme = MetroFramework.MetroThemeStyle.Light;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // Id_cte
@@ -110,30 +111,35 @@
             this.Id_cte.DataPropertyName = "Id_Cliente";
             this.Id_cte.HeaderText = "ID";
             this.Id_cte.Name = "Id_cte";
+            this.Id_cte.ReadOnly = true;
             // 
             // nom_cte
             // 
             this.nom_cte.DataPropertyName = "Nombre_Cliente";
             this.nom_cte.HeaderText = "Nombre";
             this.nom_cte.Name = "nom_cte";
+            this.nom_cte.ReadOnly = true;
             // 
             // tel_cte
             // 
             this.tel_cte.DataPropertyName = "Telefono";
             this.tel_cte.HeaderText = "Telefono";
             this.tel_cte.Name = "tel_cte";
+            this.tel_cte.ReadOnly = true;
             // 
             // dir_cte
             // 
             this.dir_cte.DataPropertyName = "Direccion";
             this.dir_cte.HeaderText = "Direccion";
             this.dir_cte.Name = "dir_cte";
+            this.dir_cte.ReadOnly = true;
             // 
             // email_cte
             // 
             this.email_cte.DataPropertyName = "Email";
             this.email_cte.HeaderText = "Email";
             this.email_cte.Name = "email_cte";
+            this.email_cte.ReadOnly = true;
             // 
             // btnAgregar
             // 
@@ -142,7 +148,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(110, 23);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAgregar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnAgregar.UseSelectable = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -172,7 +178,7 @@
             this.txbNombre.ShortcutsEnabled = true;
             this.txbNombre.Size = new System.Drawing.Size(110, 23);
             this.txbNombre.TabIndex = 2;
-            this.txbNombre.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txbNombre.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbNombre.UseSelectable = true;
             this.txbNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -203,7 +209,7 @@
             this.txbTelefono.ShortcutsEnabled = true;
             this.txbTelefono.Size = new System.Drawing.Size(110, 23);
             this.txbTelefono.TabIndex = 3;
-            this.txbTelefono.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txbTelefono.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbTelefono.UseSelectable = true;
             this.txbTelefono.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbTelefono.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -234,7 +240,7 @@
             this.txbDireccion.ShortcutsEnabled = true;
             this.txbDireccion.Size = new System.Drawing.Size(110, 23);
             this.txbDireccion.TabIndex = 4;
-            this.txbDireccion.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txbDireccion.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbDireccion.UseSelectable = true;
             this.txbDireccion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbDireccion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -265,7 +271,7 @@
             this.txbEmail.ShortcutsEnabled = true;
             this.txbEmail.Size = new System.Drawing.Size(110, 23);
             this.txbEmail.TabIndex = 5;
-            this.txbEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txbEmail.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbEmail.UseSelectable = true;
             this.txbEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -296,7 +302,7 @@
             this.txbId.ShortcutsEnabled = true;
             this.txbId.Size = new System.Drawing.Size(35, 23);
             this.txbId.TabIndex = 1;
-            this.txbId.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txbId.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbId.UseSelectable = true;
             this.txbId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -308,7 +314,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(110, 23);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnEliminar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -320,7 +326,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(20, 19);
             this.metroLabel1.TabIndex = 8;
             this.metroLabel1.Text = "Id";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // metroLabel2
             // 
@@ -330,7 +336,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(59, 19);
             this.metroLabel2.TabIndex = 9;
             this.metroLabel2.Text = "Nombre";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // metroLabel3
             // 
@@ -340,7 +346,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(58, 19);
             this.metroLabel3.TabIndex = 10;
             this.metroLabel3.Text = "Telefono";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // metroLabel4
             // 
@@ -350,7 +356,7 @@
             this.metroLabel4.Size = new System.Drawing.Size(63, 19);
             this.metroLabel4.TabIndex = 11;
             this.metroLabel4.Text = "Direccion";
-            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // metroLabel5
             // 
@@ -360,7 +366,7 @@
             this.metroLabel5.Size = new System.Drawing.Size(41, 19);
             this.metroLabel5.TabIndex = 12;
             this.metroLabel5.Text = "Email";
-            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // btnActualizar
             // 
@@ -369,7 +375,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(110, 23);
             this.btnActualizar.TabIndex = 13;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnActualizar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnActualizar.UseSelectable = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
@@ -394,7 +400,6 @@
             this.Controls.Add(this.dgvClientes);
             this.Name = "Clientes";
             this.Text = "Clientes";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);

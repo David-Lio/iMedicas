@@ -43,13 +43,13 @@ namespace iMedicas
             }
         }
 
-        public DataTable MostrarDatos()
+        public DataTable MostrarDatos(string tabla)
         {
             Crearconexion();
             try
             {
                 conexion.Open();
-                SqlDataAdapter ad = new SqlDataAdapter("Select * from Cliente", conexion);
+                SqlDataAdapter ad = new SqlDataAdapter(string.Format("Select * from {0}",tabla), conexion);
                 SqlCommandBuilder cmd = new SqlCommandBuilder(ad);
                 ds = new DataSet();
                 ad.Fill(ds);
@@ -134,7 +134,7 @@ namespace iMedicas
 
         }
 
-        public void Eliminar(string id)
+        public void EliminarClientes(string id)
         {
             Crearconexion();
             try
@@ -150,6 +150,158 @@ namespace iMedicas
                 MessageBox.Show(ex.ToString());
             }
 
+        }
+
+        public void InsertarProductos(string id, string descripcion, string precio_venta, string tipo)
+        {
+            Crearconexion();
+
+            SqlCommand cmd = new SqlCommand("insert into Producto (Id_Producto, Descripcion,Precio_Venta,Tipo_Producto) values (@Id_Producto,@Descripcion,@Precio_Venta,@Tipo_Producto)", conexion);
+            cmd.Parameters.Add("@Id_Producto", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@Descripcion", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Precio_Venta", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Tipo_Producto", System.Data.SqlDbType.VarChar);
+    
+
+            cmd.Parameters["@Id_Producto"].Value = id;
+            cmd.Parameters["@Descripcion"].Value = descripcion;
+            cmd.Parameters["@Precio_Venta"].Value = precio_venta;
+            cmd.Parameters["@Tipo_Producto"].Value = tipo;
+
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+        }
+
+        public void ActualizarProductos(string id, string descripcion, string precio_venta, string tipo)
+        {
+            Crearconexion();
+
+            SqlCommand cmd = new SqlCommand("Update Producto set Descripcion = @Descripcion,Precio_Venta = @Precio_Venta,Tipo_Producto = @Tipo_Producto where Id_Producto =" + id, conexion);
+
+            cmd.Parameters.Add("@Descripcion", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Precio_Venta", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Tipo_Producto", System.Data.SqlDbType.VarChar);
+
+            cmd.Parameters["@Descripcion"].Value = descripcion;
+            cmd.Parameters["@Precio_Venta"].Value = precio_venta;
+            cmd.Parameters["@Tipo_Producto"].Value = tipo;
+
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+        }
+
+        public void EliminarProducto(string id)
+        {
+            Crearconexion();
+            try
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand(string.Format("delete from Producto where Id_Producto = {0}", id), conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        public void InsertarVenta(string Id_Venta, string Id_Cliente, string total)
+        {
+            Crearconexion();
+
+            SqlCommand cmd = new SqlCommand("insert into Venta (Id_Venta,Id_Cliente,Total) values (@Id_Venta,@Id_Cliente,@Total)", conexion);
+            cmd.Parameters.Add("@Id_Venta", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@Id_Cliente", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Total", System.Data.SqlDbType.VarChar);
+
+            cmd.Parameters["@Id_Venta"].Value = Id_Venta;
+            cmd.Parameters["@Id_Cliente"].Value = Id_Cliente;
+            cmd.Parameters["@Total"].Value = total;
+
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+        }
+
+        public void InsertarDetallesVenta(string Id_Venta, string Id_Producto)
+        {
+            Crearconexion();
+
+            SqlCommand cmd = new SqlCommand("insert into DetallesVenta (Id_Venta,Id_Producto) values (@Id_Venta,@Id_Producto)", conexion);
+            cmd.Parameters.Add("@Id_Venta", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@Id_Producto", System.Data.SqlDbType.VarChar);
+
+            cmd.Parameters["@Id_Venta"].Value = Id_Venta;
+            cmd.Parameters["@Id_Producto"].Value = Id_Producto;
+
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+        }
+
+        public string ObtenerVentas()
+        {
+            Crearconexion();
+            string query = string.Format("Select Count(Id_Venta) from Venta");
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            conexion.Open();
+            string sdr = cmd.ExecuteScalar().ToString();
+            conexion.Close();
+            return sdr;
         }
 
         public DataTable selectSimple(string consulta, string tabla, string condicion ="")

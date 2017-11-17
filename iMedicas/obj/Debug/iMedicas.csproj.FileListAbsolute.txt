@@ -13,4 +13,9 @@ C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Inicio.resources
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Cotizacion.resources
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Login.resources
-C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.CotizacionAccesorios.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Productos.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.Ventas.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\iMedicas.exe.manifest
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\iMedicas.application
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.exe.manifest
+C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.application

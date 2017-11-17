@@ -44,7 +44,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(70, 25);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Usuario";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // txbUsuario
             // 
@@ -72,7 +72,7 @@
             this.txbUsuario.ShortcutsEnabled = true;
             this.txbUsuario.Size = new System.Drawing.Size(144, 23);
             this.txbUsuario.TabIndex = 1;
-            this.txbUsuario.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txbUsuario.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbUsuario.UseSelectable = true;
             this.txbUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -103,7 +103,7 @@
             this.txbContraseña.ShortcutsEnabled = true;
             this.txbContraseña.Size = new System.Drawing.Size(144, 23);
             this.txbContraseña.TabIndex = 3;
-            this.txbContraseña.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txbContraseña.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbContraseña.UseSelectable = true;
             this.txbContraseña.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbContraseña.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -117,7 +117,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(98, 25);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Contraseña";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // btnEntrar
             // 
@@ -126,7 +126,7 @@
             this.btnEntrar.Size = new System.Drawing.Size(100, 23);
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnEntrar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnEntrar.UseSelectable = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
@@ -142,7 +142,6 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "Login";
             this.Text = "Login";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

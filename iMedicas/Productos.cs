@@ -8,32 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
-using MetroFramework.Controls;
 using MetroFramework.Forms;
+
 
 namespace iMedicas
 {
-    public partial class Clientes : MetroForm
+    public partial class Productos : MetroForm
     {
-        Consultas sql = new Consultas();
-        public Clientes()
+        public Productos()
         {
             InitializeComponent();
         }
+        Consultas sql = new Consultas();
 
-        private void Clientes_Load(object sender, EventArgs e)
-        {
-            dgvClientes.DataSource = sql.MostrarDatos("Cliente");
-        }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow fila = dgvClientes.Rows[e.RowIndex];
+            DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
             txbId.Text = Convert.ToString(fila.Cells[0].Value);
-            txbNombre.Text = Convert.ToString(fila.Cells[1].Value);
-            txbTelefono.Text = Convert.ToString(fila.Cells[2].Value);
-            txbDireccion.Text = Convert.ToString(fila.Cells[3].Value);
-            txbEmail.Text = Convert.ToString(fila.Cells[4].Value);
+            txbDescripcion.Text = Convert.ToString(fila.Cells[1].Value);
+            txbPrecio.Text = Convert.ToString(fila.Cells[2].Value);
+            cbTipo.Text = Convert.ToString(fila.Cells[3].Value);
             txbId.Enabled = false;
         }
 
@@ -44,10 +39,10 @@ namespace iMedicas
             {
                 try
                 {
-                    sql.InsertarClientes(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
-                   // MetroMessageBox.Show(this, "La Operacion se realizo con exito");
-                    dgvClientes.DataSource = sql.MostrarDatos("Cliente");
-                    txbDireccion.Text = txbEmail.Text = txbId.Text = txbNombre.Text = txbTelefono.Text = "";
+                    sql.InsertarProductos(id, txbDescripcion.Text, txbPrecio.Text, cbTipo.SelectedItem.ToString());
+                    //MetroMessageBox.Show(this, "La Operacion se realizo con exito");
+                    dgvProductos.DataSource = sql.MostrarDatos("Producto");
+                    txbDescripcion.Text = txbPrecio.Text = txbId.Text = "";
                 }
                 catch (Exception ex)
                 {
@@ -61,9 +56,9 @@ namespace iMedicas
         {
             if (txbId.Text != "")
             {
-                sql.EliminarClientes(txbId.Text);
+                sql.EliminarProducto(txbId.Text);
                 //MetroMessageBox.Show(this, "Se elimino la fila");
-                dgvClientes.DataSource = sql.MostrarDatos("Cliente");
+                dgvProductos.DataSource = sql.MostrarDatos("Producto");
             }
             else
             {
@@ -85,10 +80,10 @@ namespace iMedicas
 
                         try
                         {
-                            sql.ActualizarClientes(id, txbNombre.Text, txbTelefono.Text, txbDireccion.Text, txbEmail.Text);
-                            //MetroMessageBox.Show(this, "La Operacion se realizo con exito");
-                            dgvClientes.DataSource = sql.MostrarDatos("Cliente");
-                            txbDireccion.Text = txbEmail.Text = txbId.Text = txbNombre.Text = txbTelefono.Text = "";
+                            sql.ActualizarProductos(id, txbDescripcion.Text,txbPrecio.Text,cbTipo.SelectedItem.ToString());
+                           // MetroMessageBox.Show(this, "La Operacion se realizo con exito");
+                            dgvProductos.DataSource = sql.MostrarDatos("Producto");
+                            txbDescripcion.Text = txbPrecio.Text = txbId.Text = "";
                             txbId.Enabled = true;
                         }
                         catch (Exception ex)
@@ -107,11 +102,10 @@ namespace iMedicas
 
         public Boolean Validaciones()
         {
-            if (txbDireccion.Text != "" &&
-                txbEmail.Text != "" &&
+            if (txbDescripcion.Text != "" &&
+                txbPrecio.Text != "" &&
                 txbId.Text != "" &&
-                txbNombre.Text != "" &&
-                txbTelefono.Text != "")
+                cbTipo.SelectedItem.ToString() != "")
             {
                 return true;
             }
@@ -124,7 +118,7 @@ namespace iMedicas
 
         public Boolean ValidarIdRepetido(string id)
         {
-            foreach (DataGridViewRow row in dgvClientes.Rows)
+            foreach (DataGridViewRow row in dgvProductos.Rows)
             {
                 if (row.Cells[0].Value != null)
                 {
@@ -145,6 +139,11 @@ namespace iMedicas
             {
                 e.Handled = true;
             }
+        }
+
+        private void Productos_Load(object sender, EventArgs e)
+        {
+            dgvProductos.DataSource = sql.MostrarDatos("Producto");
         }
     }
 }

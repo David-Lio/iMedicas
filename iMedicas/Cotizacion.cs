@@ -44,10 +44,10 @@ namespace iMedicas
 
         }
 
-        private void btnAccesorios_Click(object sender, EventArgs e)
+        private void btnContinuar_Click(object sender, EventArgs e)
         {
-            CotizacionAccesorios accesorios = new CotizacionAccesorios();
-            accesorios.Show();
+            Ventas venta = new Ventas(cbClientes.SelectedValue.ToString());
+            venta.Show();
         }
     }
 }

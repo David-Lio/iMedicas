@@ -14,19 +14,23 @@ namespace iMedicas
 {
     public partial class Ventas : MetroForm
     {
+        Consultas sql = new Consultas();
         string id_cliente;
+        string x = "";
         public Ventas(string id)
         {
             InitializeComponent();
             id_cliente += id;
         }
 
-        Consultas sql = new Consultas();
+        
         
 
         private void Ventas_Load(object sender, EventArgs e)
         {
             lblCliente.Text = "Venta Para: "+sql.selectDatoSimple("Nombre_Cliente", "Cliente", "Where Id_Cliente =" + id_cliente);
+            x = 1 + sql.ObtenerVentas();
+            lblVenta.Text = "Venta Numero: " + x;
 
             cbProductos.ValueMember = "Id_Producto";
             cbProductos.DisplayMember = "Descripcion";
@@ -67,7 +71,7 @@ namespace iMedicas
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
-            string x = 1 + sql.ObtenerVentas();
+            
             if (x != null)
             {
                 sql.InsertarVenta(x,id_cliente,lblTotal.Text);
@@ -83,6 +87,18 @@ namespace iMedicas
             }
 
 
+            MetroMessageBox.Show(this, "Se realizo la venta con el Id: " + x);
+            this.Close();
+
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvProductos.SelectedRows.Count > 0)
+            {
+                dgvProductos.Rows.RemoveAt(this.dgvProductos.SelectedRows[0].Index);
+            }
         }
     }
 }

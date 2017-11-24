@@ -56,9 +56,17 @@ namespace iMedicas
         {
             if (txbId.Text != "")
             {
-                sql.EliminarProducto(txbId.Text);
-                //MetroMessageBox.Show(this, "Se elimino la fila");
-                dgvProductos.DataSource = sql.MostrarDatos("Producto");
+                try
+                {
+                    sql.EliminarProducto(txbId.Text);
+                    //MetroMessageBox.Show(this, "Se elimino la fila");
+                    dgvProductos.DataSource = sql.MostrarDatos("Producto");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("No se pudo eliminar el producto porque esta relacionado con una venta");
+                }
+                
             }
             else
             {

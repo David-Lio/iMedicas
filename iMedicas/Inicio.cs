@@ -27,8 +27,8 @@ namespace iMedicas
 
         private void btnCotizacion_Click(object sender, EventArgs e)
         {
-            Cotizacion cotizacion = new Cotizacion();
-            cotizacion.Show();
+            Ventas venta = new Ventas();
+            venta.Show();
         }
 
         private void btnClientes_Click(object sender, EventArgs e)

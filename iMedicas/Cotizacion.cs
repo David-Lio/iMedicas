@@ -46,7 +46,7 @@ namespace iMedicas
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            Ventas venta = new Ventas(cbClientes.SelectedValue.ToString());
+            Ventas venta = new Ventas();
             venta.ShowDialog();
         }
     }

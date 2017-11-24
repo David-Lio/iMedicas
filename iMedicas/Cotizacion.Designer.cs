@@ -210,7 +210,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.cbClientes);
             this.Name = "Cotizacion";
-            this.Text = "Cotizacion";
+            this.Text = "Ventas";
             this.Load += new System.EventHandler(this.Cliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

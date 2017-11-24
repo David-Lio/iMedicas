@@ -229,7 +229,7 @@ namespace iMedicas
             catch (Exception ex)
             {
                 conexion.Close();
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("No se puede eliminar el producto porque esta relacionado con una venta");
             }
 
         }

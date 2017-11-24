@@ -17,10 +17,9 @@ namespace iMedicas
         Consultas sql = new Consultas();
         string id_cliente;
         string x = "";
-        public Ventas(string id)
+        public Ventas()
         {
             InitializeComponent();
-            id_cliente += id;
         }
 
         
@@ -28,13 +27,32 @@ namespace iMedicas
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            lblCliente.Text = "Venta Para: "+sql.selectDatoSimple("Nombre_Cliente", "Cliente", "Where Id_Cliente =" + id_cliente);
+            cbClientes.DisplayMember = "Nombre_Cliente";
+            cbClientes.ValueMember = "Id_Cliente";
+
+            cbClientes.DataSource = sql.selectSimple("Id_Cliente,Nombre_Cliente", "Cliente");
+
             x = 1 + sql.ObtenerVentas();
             lblVenta.Text = "Venta Numero: " + x;
 
             cbProductos.ValueMember = "Id_Producto";
             cbProductos.DisplayMember = "Descripcion";
             cbProductos.DataSource = sql.selectSimple("Id_Producto,Descripcion", "Producto");
+        }
+
+        private void cbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            id_cliente = cbClientes.SelectedValue.ToString();
+            string tabla = "Cliente";
+            string condicion = "where Id_Cliente =" + id_cliente;
+            string telefono = sql.selectDatoSimple("Telefono", tabla, condicion);
+            string direccion = sql.selectDatoSimple("Direccion", tabla, condicion);
+            string email = sql.selectDatoSimple("Email", tabla, condicion);
+
+            txbTelefono.Text = telefono;
+            txbDireccion.Text = direccion;
+            txbEmail.Text = email;
+
         }
 
         private void cbProductos_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,24 +89,31 @@ namespace iMedicas
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
-            
-            if (x != null)
-            {
-                sql.InsertarVenta(x,id_cliente,lblTotal.Text);
 
-                foreach(DataGridViewRow row in dgvProductos.Rows)
+            try
+            {
+                if (x != null && dgvProductos.Rows.Count != 0)
                 {
-                    if(row.Cells[0].Value != null)
+                    sql.InsertarVenta(x, id_cliente, lblTotal.Text);
+
+                    foreach (DataGridViewRow row in dgvProductos.Rows)
                     {
-                        string valor = row.Cells[0].Value.ToString();
-                        sql.InsertarDetallesVenta(x, valor);
+                        if (row.Cells[0].Value != null)
+                        {
+                            string valor = row.Cells[0].Value.ToString();
+                            sql.InsertarDetallesVenta(x, valor);
+                        }
                     }
                 }
+
+
+                MetroMessageBox.Show(this, "Se realizo la venta con el Id: " + x);
+                this.Close();
             }
-
-
-            MetroMessageBox.Show(this, "Se realizo la venta con el Id: " + x);
-            this.Close();
+            catch(Exception ex)
+            {
+                MetroMessageBox.Show(this, "No se pudo realizar la venta");
+            }
 
 
         }

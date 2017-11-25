@@ -125,6 +125,11 @@ namespace iMedicas
 
 
         }
+        
+        private void MensajeEjemplo()
+        {
+            MessageBox.Show("ejemplo");
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {

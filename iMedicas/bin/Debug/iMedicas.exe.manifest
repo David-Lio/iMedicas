@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iMedicas.exe" size="49152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="iMedicas.exe" size="50688">
       <assemblyIdentity name="iMedicas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jgxylb/a96PARXa/lbOdTKCeA0bykuk2mEATjZqXX0M=</dsig:DigestValue>
+        <dsig:DigestValue>Al5nrjitymA8WWbnXCQMvRyQGAKbM6drjjsv02sroSY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

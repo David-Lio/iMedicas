@@ -92,7 +92,7 @@ namespace iMedicas
 
             try
             {
-                if (x != null && dgvProductos.Rows.Count != 0)
+                if (x != null && dgvProductos.Rows.Count != 1)
                 {
                     sql.InsertarVenta(x, id_cliente, lblTotal.Text);
 
@@ -102,13 +102,21 @@ namespace iMedicas
                         {
                             string valor = row.Cells[0].Value.ToString();
                             sql.InsertarDetallesVenta(x, valor);
+                            string existencia = sql.selectDatoSimple("Existencia -1", "Producto", "Where Id_Producto=" + valor);
+                            sql.ActualizarExistencias(valor, Convert.ToInt16(existencia));
                         }
                     }
+
+                    MetroMessageBox.Show(this, "Se realizo la venta con el Id: " + x);
+                    this.Close();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Necesitas Agregar Productos");
                 }
 
 
-                MetroMessageBox.Show(this, "Se realizo la venta con el Id: " + x);
-                this.Close();
+
             }
             catch(Exception ex)
             {
@@ -125,5 +133,6 @@ namespace iMedicas
                 dgvProductos.Rows.RemoveAt(this.dgvProductos.SelectedRows[0].Index);
             }
         }
+
     }
 }

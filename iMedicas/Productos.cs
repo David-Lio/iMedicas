@@ -39,7 +39,7 @@ namespace iMedicas
             {
                 try
                 {
-                    sql.InsertarProductos(id, txbDescripcion.Text, txbPrecio.Text, cbTipo.SelectedItem.ToString());
+                    sql.InsertarProductos(id, txbDescripcion.Text, txbPrecio.Text, cbTipo.SelectedItem.ToString(),Convert.ToInt16(txbExistencia.Text));
                     //MetroMessageBox.Show(this, "La Operacion se realizo con exito");
                     dgvProductos.DataSource = sql.MostrarDatos("Producto");
                     txbDescripcion.Text = txbPrecio.Text = txbId.Text = "";
@@ -88,7 +88,7 @@ namespace iMedicas
 
                         try
                         {
-                            sql.ActualizarProductos(id, txbDescripcion.Text,txbPrecio.Text,cbTipo.SelectedItem.ToString());
+                            sql.ActualizarProductos(id, txbDescripcion.Text,txbPrecio.Text,cbTipo.SelectedItem.ToString(),Convert.ToInt16(txbExistencia.Text));
                            // MetroMessageBox.Show(this, "La Operacion se realizo con exito");
                             dgvProductos.DataSource = sql.MostrarDatos("Producto");
                             txbDescripcion.Text = txbPrecio.Text = txbId.Text = "";
@@ -113,6 +113,7 @@ namespace iMedicas
             if (txbDescripcion.Text != "" &&
                 txbPrecio.Text != "" &&
                 txbId.Text != "" &&
+                txbExistencia.Text != "" &&
                 cbTipo.SelectedItem.ToString() != "")
             {
                 return true;

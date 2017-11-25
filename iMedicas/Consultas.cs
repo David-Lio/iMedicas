@@ -152,21 +152,23 @@ namespace iMedicas
 
         }
 
-        public void InsertarProductos(string id, string descripcion, string precio_venta, string tipo)
+        public void InsertarProductos(string id, string descripcion, string precio_venta, string tipo, int existencia)
         {
             Crearconexion();
 
-            SqlCommand cmd = new SqlCommand("insert into Producto (Id_Producto, Descripcion,Precio_Venta,Tipo_Producto) values (@Id_Producto,@Descripcion,@Precio_Venta,@Tipo_Producto)", conexion);
+            SqlCommand cmd = new SqlCommand("insert into Producto (Id_Producto, Descripcion,Precio_Venta,Tipo_Producto,Existencia) values (@Id_Producto,@Descripcion,@Precio_Venta,@Tipo_Producto,@Existencia)", conexion);
             cmd.Parameters.Add("@Id_Producto", System.Data.SqlDbType.Int);
             cmd.Parameters.Add("@Descripcion", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@Precio_Venta", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@Tipo_Producto", System.Data.SqlDbType.VarChar);
-    
+            cmd.Parameters.Add("@Existencia", System.Data.SqlDbType.VarChar);
+
 
             cmd.Parameters["@Id_Producto"].Value = id;
             cmd.Parameters["@Descripcion"].Value = descripcion;
             cmd.Parameters["@Precio_Venta"].Value = precio_venta;
             cmd.Parameters["@Tipo_Producto"].Value = tipo;
+            cmd.Parameters["@Existencia"].Value = existencia;
 
             try
             {
@@ -185,19 +187,46 @@ namespace iMedicas
 
         }
 
-        public void ActualizarProductos(string id, string descripcion, string precio_venta, string tipo)
+        public void ActualizarProductos(string id, string descripcion, string precio_venta, string tipo, int existencia)
         {
             Crearconexion();
 
-            SqlCommand cmd = new SqlCommand("Update Producto set Descripcion = @Descripcion,Precio_Venta = @Precio_Venta,Tipo_Producto = @Tipo_Producto where Id_Producto =" + id, conexion);
+            SqlCommand cmd = new SqlCommand("Update Producto set Descripcion = @Descripcion,Precio_Venta = @Precio_Venta,Tipo_Producto = @Tipo_Producto, Existencia = @Existencia where Id_Producto =" + id, conexion);
 
             cmd.Parameters.Add("@Descripcion", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@Precio_Venta", System.Data.SqlDbType.VarChar);
             cmd.Parameters.Add("@Tipo_Producto", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Existencia", System.Data.SqlDbType.VarChar);
 
             cmd.Parameters["@Descripcion"].Value = descripcion;
             cmd.Parameters["@Precio_Venta"].Value = precio_venta;
             cmd.Parameters["@Tipo_Producto"].Value = tipo;
+            cmd.Parameters["@Existencia"].Value = existencia;
+
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+        }
+
+        public void ActualizarExistencias(string id, int existencia)
+        {
+            Crearconexion();
+
+            SqlCommand cmd = new SqlCommand("Update Producto set Existencia = @Existencia where Id_Producto =" + id, conexion);
+            cmd.Parameters.Add("@Existencia", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@Existencia"].Value = existencia;
 
             try
             {

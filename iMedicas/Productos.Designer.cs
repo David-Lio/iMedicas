@@ -40,13 +40,16 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.dgvProductos = new MetroFramework.Controls.MetroGrid();
+            this.btnAgregar = new MetroFramework.Controls.MetroButton();
+            this.btnActualizar = new MetroFramework.Controls.MetroButton();
+            this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.Id_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregar = new MetroFramework.Controls.MetroButton();
-            this.btnActualizar = new MetroFramework.Controls.MetroButton();
-            this.btnEliminar = new MetroFramework.Controls.MetroButton();
+            this.existenciaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txbExistencia = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,7 +152,7 @@
             this.cbTipo.Items.AddRange(new object[] {
             "Microscopio",
             "Accesorio"});
-            this.cbTipo.Location = new System.Drawing.Point(395, 122);
+            this.cbTipo.Location = new System.Drawing.Point(497, 122);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(121, 29);
             this.cbTipo.TabIndex = 3;
@@ -185,7 +188,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(434, 100);
+            this.metroLabel4.Location = new System.Drawing.Point(497, 100);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(35, 19);
             this.metroLabel4.TabIndex = 7;
@@ -211,7 +214,8 @@
             this.Id_Producto,
             this.Descripcion_Producto,
             this.Precio_Producto,
-            this.Tipo_Producto});
+            this.Tipo_Producto,
+            this.existenciaProducto});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -237,39 +241,9 @@
             this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(523, 193);
+            this.dgvProductos.Size = new System.Drawing.Size(623, 193);
             this.dgvProductos.TabIndex = 8;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
-            // 
-            // Id_Producto
-            // 
-            this.Id_Producto.DataPropertyName = "Id_Producto";
-            this.Id_Producto.HeaderText = "Id";
-            this.Id_Producto.Name = "Id_Producto";
-            this.Id_Producto.ReadOnly = true;
-            // 
-            // Descripcion_Producto
-            // 
-            this.Descripcion_Producto.DataPropertyName = "Descripcion";
-            this.Descripcion_Producto.HeaderText = "Descripcion";
-            this.Descripcion_Producto.Name = "Descripcion_Producto";
-            this.Descripcion_Producto.ReadOnly = true;
-            this.Descripcion_Producto.Width = 200;
-            // 
-            // Precio_Producto
-            // 
-            this.Precio_Producto.DataPropertyName = "Precio_Venta";
-            this.Precio_Producto.HeaderText = "Precio";
-            this.Precio_Producto.Name = "Precio_Producto";
-            this.Precio_Producto.ReadOnly = true;
-            // 
-            // Tipo_Producto
-            // 
-            this.Tipo_Producto.DataPropertyName = "Tipo_Producto";
-            this.Tipo_Producto.HeaderText = "Tipo";
-            this.Tipo_Producto.Name = "Tipo_Producto";
-            this.Tipo_Producto.ReadOnly = true;
-            this.Tipo_Producto.Width = 80;
             // 
             // btnAgregar
             // 
@@ -301,11 +275,90 @@
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // Id_Producto
+            // 
+            this.Id_Producto.DataPropertyName = "Id_Producto";
+            this.Id_Producto.HeaderText = "Id";
+            this.Id_Producto.Name = "Id_Producto";
+            this.Id_Producto.ReadOnly = true;
+            // 
+            // Descripcion_Producto
+            // 
+            this.Descripcion_Producto.DataPropertyName = "Descripcion";
+            this.Descripcion_Producto.HeaderText = "Descripcion";
+            this.Descripcion_Producto.Name = "Descripcion_Producto";
+            this.Descripcion_Producto.ReadOnly = true;
+            this.Descripcion_Producto.Width = 200;
+            // 
+            // Precio_Producto
+            // 
+            this.Precio_Producto.DataPropertyName = "Precio_Venta";
+            this.Precio_Producto.HeaderText = "Precio";
+            this.Precio_Producto.Name = "Precio_Producto";
+            this.Precio_Producto.ReadOnly = true;
+            // 
+            // Tipo_Producto
+            // 
+            this.Tipo_Producto.DataPropertyName = "Tipo_Producto";
+            this.Tipo_Producto.HeaderText = "Tipo";
+            this.Tipo_Producto.Name = "Tipo_Producto";
+            this.Tipo_Producto.ReadOnly = true;
+            this.Tipo_Producto.Width = 80;
+            // 
+            // existenciaProducto
+            // 
+            this.existenciaProducto.DataPropertyName = "Existencia";
+            this.existenciaProducto.HeaderText = "Existencia";
+            this.existenciaProducto.Name = "existenciaProducto";
+            this.existenciaProducto.ReadOnly = true;
+            // 
+            // txbExistencia
+            // 
+            this.txbExistencia.AutoSize = true;
+            this.txbExistencia.Location = new System.Drawing.Point(395, 106);
+            this.txbExistencia.Name = "txbExistencia";
+            this.txbExistencia.Size = new System.Drawing.Size(64, 19);
+            this.txbExistencia.TabIndex = 13;
+            this.txbExistencia.Text = "Existencia";
+            // 
+            // metroTextBox1
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(395, 128);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(75, 23);
+            this.metroTextBox1.TabIndex = 12;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbId_KeyPress);
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 397);
+            this.ClientSize = new System.Drawing.Size(658, 397);
+            this.Controls.Add(this.txbExistencia);
+            this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
@@ -338,12 +391,15 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroGrid dgvProductos;
+        private MetroFramework.Controls.MetroButton btnAgregar;
+        private MetroFramework.Controls.MetroButton btnActualizar;
+        private MetroFramework.Controls.MetroButton btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Producto;
-        private MetroFramework.Controls.MetroButton btnAgregar;
-        private MetroFramework.Controls.MetroButton btnActualizar;
-        private MetroFramework.Controls.MetroButton btnEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn existenciaProducto;
+        private MetroFramework.Controls.MetroLabel txbExistencia;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
     }
 }

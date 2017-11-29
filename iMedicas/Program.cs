@@ -16,7 +16,8 @@ namespace iMedicas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio());
+            //Application.Run(new Inicio());
+            Application.Run(new Historial_Ventas());
         }
     }
 }

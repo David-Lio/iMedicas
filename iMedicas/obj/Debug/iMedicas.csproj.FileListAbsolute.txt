@@ -19,3 +19,26 @@ C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\iMedicas.application
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.exe.manifest
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.application
+C:\iMedicas.git\iMedicas\bin\Debug\iMedicas.exe.config
+C:\iMedicas.git\iMedicas\bin\Debug\iMedicas.exe.manifest
+C:\iMedicas.git\iMedicas\bin\Debug\iMedicas.application
+C:\iMedicas.git\iMedicas\bin\Debug\iMedicas.exe
+C:\iMedicas.git\iMedicas\bin\Debug\iMedicas.pdb
+C:\iMedicas.git\iMedicas\bin\Debug\MetroFramework.Design.dll
+C:\iMedicas.git\iMedicas\bin\Debug\MetroFramework.dll
+C:\iMedicas.git\iMedicas\bin\Debug\MetroFramework.Fonts.dll
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.csprojResolveAssemblyReference.cache
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Cotizacion.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Clientes.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Historial_Ventas.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Inicio.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Login.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Productos.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Properties.Resources.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.Ventas.resources
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.csproj.GenerateResource.Cache
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.csproj.CoreCompileInputs.cache
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.exe.manifest
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.application
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.exe
+C:\iMedicas.git\iMedicas\obj\Debug\iMedicas.pdb

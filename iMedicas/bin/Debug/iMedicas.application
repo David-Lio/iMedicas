@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="iMedicas.exe.manifest" size="5597">
+    <dependentAssembly dependencyType="install" codebase="iMedicas.exe.manifest" size="5558">
       <assemblyIdentity name="iMedicas.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1IFeGC1KznV/KBG0Vj/OYM1emyJgjYefGMz7RrcG4BY=</dsig:DigestValue>
+        <dsig:DigestValue>rNQCNeLEHMRydrYbDyOBcxfgYNH8uEyGey/SIQcBp5A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

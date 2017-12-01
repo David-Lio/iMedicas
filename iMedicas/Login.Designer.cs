@@ -71,7 +71,7 @@
             this.txbUsuario.SelectionStart = 0;
             this.txbUsuario.ShortcutsEnabled = true;
             this.txbUsuario.Size = new System.Drawing.Size(144, 23);
-            this.txbUsuario.TabIndex = 1;
+            this.txbUsuario.TabIndex = 0;
             this.txbUsuario.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbUsuario.UseSelectable = true;
             this.txbUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -102,7 +102,7 @@
             this.txbContraseña.SelectionStart = 0;
             this.txbContraseña.ShortcutsEnabled = true;
             this.txbContraseña.Size = new System.Drawing.Size(144, 23);
-            this.txbContraseña.TabIndex = 3;
+            this.txbContraseña.TabIndex = 1;
             this.txbContraseña.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbContraseña.UseSelectable = true;
             this.txbContraseña.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -124,7 +124,7 @@
             this.btnEntrar.Location = new System.Drawing.Point(43, 230);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(100, 23);
-            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnEntrar.UseSelectable = true;

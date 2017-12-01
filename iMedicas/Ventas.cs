@@ -63,10 +63,47 @@ namespace iMedicas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            int existenciaMaxima = Convert.ToInt16(sql.selectDatoSimple("Existencia", "Producto", "Where Id_Producto=" + cbProductos.SelectedValue.ToString())); 
+            bool permitirAgregar = true;
             if(txbPrecio.Text != "" &&
                 txbDescripcion.Text != "")
             {
-                dgvProductos.Rows.Add(cbProductos.SelectedValue.ToString(), txbDescripcion.Text, txbPrecio.Text);
+                int existencia = Convert.ToInt16(sql.selectDatoSimple("Existencia", "Producto", "Where Id_Producto=" + cbProductos.SelectedValue.ToString()));
+                if(existencia != 0)
+                {
+                    foreach(DataGridViewRow row in dgvProductos.Rows)
+                    {
+                        if(row != null)
+                        {
+                            if (Convert.ToInt16(row.Cells[0].Value) == Convert.ToInt16(cbProductos.SelectedValue) )
+                            {
+                                if (Convert.ToInt16(row.Cells[3].Value) < existenciaMaxima)
+                                {
+                                    row.Cells[3].Value = Convert.ToInt16(row.Cells[3].Value) + 1;
+                                    permitirAgregar = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se puede aumentar la cantidad de ese objeto" + Environment.NewLine + "La cantidad maxima es " + existenciaMaxima);
+                                    permitirAgregar = false;
+                                }
+                                
+
+                            }
+                        }
+                        
+                    }
+                    if (permitirAgregar)
+                    {
+                        dgvProductos.Rows.Add(cbProductos.SelectedValue.ToString(), txbDescripcion.Text, txbPrecio.Text,1);
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("No se puede vender ese producto." + Environment.NewLine + "El producto ya no tiene existencias");
+                }
             }
 
             total();
@@ -79,7 +116,7 @@ namespace iMedicas
             {
                 if (row != null)
                 {
-                    total += Convert.ToInt16(row.Cells[2].Value);
+                    total += Convert.ToInt16(row.Cells[2].Value) * Convert.ToInt16(row.Cells[3].Value);
 
                 }
             }
@@ -101,8 +138,8 @@ namespace iMedicas
                         if (row.Cells[0].Value != null)
                         {
                             string valor = row.Cells[0].Value.ToString();
-                            sql.InsertarDetallesVenta(x, valor);
-                            string existencia = sql.selectDatoSimple("Existencia -1", "Producto", "Where Id_Producto=" + valor);
+                            sql.InsertarDetallesVenta(x, valor,row.Cells[3].Value.ToString());
+                            string existencia = sql.selectDatoSimple("Existencia -"+ row.Cells[3].Value.ToString(), "Producto", "Where Id_Producto=" + valor);
                             sql.ActualizarExistencias(valor, Convert.ToInt16(existencia));
                         }
                     }

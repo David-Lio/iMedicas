@@ -34,6 +34,9 @@
             this.cbProductos = new MetroFramework.Controls.MetroComboBox();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.dgvProductos = new MetroFramework.Controls.MetroGrid();
+            this.Id_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txbPrecio = new MetroFramework.Controls.MetroTextBox();
@@ -52,9 +55,7 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.Id_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +99,8 @@
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Producto,
             this.Descripcion_Producto,
-            this.Precio_Producto});
+            this.Precio_Producto,
+            this.Cantidad});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -124,8 +126,30 @@
             this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(451, 193);
+            this.dgvProductos.Size = new System.Drawing.Size(544, 193);
             this.dgvProductos.TabIndex = 20;
+            // 
+            // Id_Producto
+            // 
+            this.Id_Producto.DataPropertyName = "Id_Producto";
+            this.Id_Producto.HeaderText = "Id Producto";
+            this.Id_Producto.Name = "Id_Producto";
+            this.Id_Producto.ReadOnly = true;
+            // 
+            // Descripcion_Producto
+            // 
+            this.Descripcion_Producto.DataPropertyName = "Descripcion";
+            this.Descripcion_Producto.HeaderText = "Descripcion";
+            this.Descripcion_Producto.Name = "Descripcion_Producto";
+            this.Descripcion_Producto.ReadOnly = true;
+            this.Descripcion_Producto.Width = 200;
+            // 
+            // Precio_Producto
+            // 
+            this.Precio_Producto.DataPropertyName = "Precio_Venta";
+            this.Precio_Producto.HeaderText = "Precio";
+            this.Precio_Producto.Name = "Precio_Producto";
+            this.Precio_Producto.ReadOnly = true;
             // 
             // metroLabel3
             // 
@@ -407,27 +431,11 @@
             this.metroLabel8.TabIndex = 37;
             this.metroLabel8.Text = "Seleccione Producto";
             // 
-            // Id_Producto
+            // Cantidad
             // 
-            this.Id_Producto.DataPropertyName = "Id_Producto";
-            this.Id_Producto.HeaderText = "Id Producto";
-            this.Id_Producto.Name = "Id_Producto";
-            this.Id_Producto.ReadOnly = true;
-            // 
-            // Descripcion_Producto
-            // 
-            this.Descripcion_Producto.DataPropertyName = "Descripcion";
-            this.Descripcion_Producto.HeaderText = "Descripcion";
-            this.Descripcion_Producto.Name = "Descripcion_Producto";
-            this.Descripcion_Producto.ReadOnly = true;
-            this.Descripcion_Producto.Width = 200;
-            // 
-            // Precio_Producto
-            // 
-            this.Precio_Producto.DataPropertyName = "Precio_Venta";
-            this.Precio_Producto.HeaderText = "Precio";
-            this.Precio_Producto.Name = "Precio_Producto";
-            this.Precio_Producto.ReadOnly = true;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // Ventas
             // 
@@ -490,5 +498,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }

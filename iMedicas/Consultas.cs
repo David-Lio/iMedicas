@@ -293,16 +293,18 @@ namespace iMedicas
 
         }
 
-        public void InsertarDetallesVenta(string Id_Venta, string Id_Producto)
+        public void InsertarDetallesVenta(string Id_Venta, string Id_Producto,string Cantidad)
         {
             Crearconexion();
 
-            SqlCommand cmd = new SqlCommand("insert into DetallesVenta (Id_Venta,Id_Producto) values (@Id_Venta,@Id_Producto)", conexion);
+            SqlCommand cmd = new SqlCommand("insert into DetallesVenta (Id_Venta,Id_Producto,Cantidad) values (@Id_Venta,@Id_Producto,@Cantidad)", conexion);
             cmd.Parameters.Add("@Id_Venta", System.Data.SqlDbType.Int);
-            cmd.Parameters.Add("@Id_Producto", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Id_Producto", System.Data.SqlDbType.Int);
+            cmd.Parameters.Add("@Cantidad", System.Data.SqlDbType.Int);
 
             cmd.Parameters["@Id_Venta"].Value = Id_Venta;
             cmd.Parameters["@Id_Producto"].Value = Id_Producto;
+            cmd.Parameters["@Cantidad"].Value = Cantidad;
 
             try
             {

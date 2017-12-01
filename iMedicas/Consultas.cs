@@ -267,14 +267,16 @@ namespace iMedicas
         {
             Crearconexion();
 
-            SqlCommand cmd = new SqlCommand("insert into Venta (Id_Venta,Id_Cliente,Total) values (@Id_Venta,@Id_Cliente,@Total)", conexion);
+            SqlCommand cmd = new SqlCommand("insert into Venta (Id_Venta,Id_Cliente,Total,Estado) values (@Id_Venta,@Id_Cliente,@Total,@Estado)", conexion);
             cmd.Parameters.Add("@Id_Venta", System.Data.SqlDbType.Int);
-            cmd.Parameters.Add("@Id_Cliente", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Id_Cliente", System.Data.SqlDbType.Int);
             cmd.Parameters.Add("@Total", System.Data.SqlDbType.VarChar);
+            cmd.Parameters.Add("@Estado", System.Data.SqlDbType.VarChar);
 
             cmd.Parameters["@Id_Venta"].Value = Id_Venta;
             cmd.Parameters["@Id_Cliente"].Value = Id_Cliente;
             cmd.Parameters["@Total"].Value = total;
+            cmd.Parameters["@Estado"].Value = "Activa";
 
             try
             {
@@ -323,7 +325,7 @@ namespace iMedicas
 
         }
 
-        public string ObtenerVentas()
+        public string ObtenerNumeroVentas()
         {
             Crearconexion();
             string query = string.Format("Select Count(Id_Venta) from Venta");

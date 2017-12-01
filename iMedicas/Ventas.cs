@@ -32,7 +32,7 @@ namespace iMedicas
 
             cbClientes.DataSource = sql.selectSimple("Id_Cliente,Nombre_Cliente", "Cliente");
 
-            x = 1 + sql.ObtenerVentas();
+            x = 1 + sql.ObtenerNumeroVentas();
             lblVenta.Text = "Venta Numero: " + x;
 
             cbProductos.ValueMember = "Id_Producto";

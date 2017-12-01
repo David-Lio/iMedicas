@@ -19,3 +19,24 @@ C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\bin\Debug\iMedicas.application
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.exe.manifest
 C:\Users\David\Documents\Visual Studio 2015\Projects\iMedicas\iMedicas\obj\Debug\iMedicas.application
+C:\iMedicas\iMedicas\bin\Debug\iMedicas.exe.config
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.exe
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.pdb
+C:\iMedicas\iMedicas\bin\Debug\iMedicas.exe.manifest
+C:\iMedicas\iMedicas\bin\Debug\iMedicas.application
+C:\iMedicas\iMedicas\bin\Debug\iMedicas.exe
+C:\iMedicas\iMedicas\bin\Debug\iMedicas.pdb
+C:\iMedicas\iMedicas\bin\Debug\MetroFramework.Design.dll
+C:\iMedicas\iMedicas\bin\Debug\MetroFramework.dll
+C:\iMedicas\iMedicas\bin\Debug\MetroFramework.Fonts.dll
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.csprojResolveAssemblyReference.cache
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.Cotizacion.resources
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.Clientes.resources
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.Inicio.resources
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.Login.resources
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.Productos.resources
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.Properties.Resources.resources
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.Ventas.resources
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.csproj.GenerateResource.Cache
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.exe.manifest
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.application

@@ -21,7 +21,7 @@ namespace iMedicas
 
         private void Crearconexion()
         {
-            stringconexion.ConnectionString = "Data Source=192.168.1.1;Initial Catalog=iMedicas;";
+            stringconexion.ConnectionString = "Data Source=DESKTOP-PAISPB6;Initial Catalog=iMedicas;";
             stringconexion.UserID = "sa";
             stringconexion.Password = "123456";
             conexion = new SqlConnection(stringconexion.ConnectionString);

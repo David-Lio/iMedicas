@@ -29,6 +29,7 @@ namespace iMedicas
             txbDescripcion.Text = Convert.ToString(fila.Cells[1].Value);
             txbPrecio.Text = Convert.ToString(fila.Cells[2].Value);
             cbTipo.Text = Convert.ToString(fila.Cells[3].Value);
+            txbExistencia.Text = Convert.ToString(fila.Cells[4].Value);
             txbId.Enabled = false;
         }
 
@@ -39,10 +40,10 @@ namespace iMedicas
             {
                 try
                 {
-                    sql.InsertarProductos(id, txbDescripcion.Text, txbPrecio.Text, cbTipo.SelectedItem.ToString(),Convert.ToInt16(txbExistencia.Text));
+                    sql.InsertarProductos(id, txbDescripcion.Text, txbPrecio.Text, cbTipo.SelectedItem.ToString(),txbExistencia.Text);
                     //MetroMessageBox.Show(this, "La Operacion se realizo con exito");
                     dgvProductos.DataSource = sql.MostrarDatos("Producto");
-                    txbDescripcion.Text = txbPrecio.Text = txbId.Text = "";
+                    txbDescripcion.Text = txbPrecio.Text = txbId.Text = txbExistencia.Text ="";
                 }
                 catch (Exception ex)
                 {
@@ -88,11 +89,12 @@ namespace iMedicas
 
                         try
                         {
-                            sql.ActualizarProductos(id, txbDescripcion.Text,txbPrecio.Text,cbTipo.SelectedItem.ToString(),Convert.ToInt16(txbExistencia.Text));
+                            sql.ActualizarProductos(id, txbDescripcion.Text,txbPrecio.Text,cbTipo.SelectedItem.ToString(),txbExistencia.Text);
                            // MetroMessageBox.Show(this, "La Operacion se realizo con exito");
                             dgvProductos.DataSource = sql.MostrarDatos("Producto");
-                            txbDescripcion.Text = txbPrecio.Text = txbId.Text = "";
+                            txbDescripcion.Text = txbPrecio.Text = txbId.Text = txbExistencia.Text= "";
                             txbId.Enabled = true;
+                            dgvProductos.DataSource = sql.MostrarDatos("Producto");
                         }
                         catch (Exception ex)
                         {
@@ -114,7 +116,7 @@ namespace iMedicas
                 txbPrecio.Text != "" &&
                 txbId.Text != "" &&
                 txbExistencia.Text != "" &&
-                cbTipo.SelectedItem.ToString() != "")
+                cbTipo.SelectedItem != null)
             {
                 return true;
             }

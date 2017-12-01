@@ -152,7 +152,7 @@ namespace iMedicas
 
         }
 
-        public void InsertarProductos(string id, string descripcion, string precio_venta, string tipo, int existencia)
+        public void InsertarProductos(string id, string descripcion, string precio_venta, string tipo, string existencia)
         {
             Crearconexion();
 
@@ -187,7 +187,7 @@ namespace iMedicas
 
         }
 
-        public void ActualizarProductos(string id, string descripcion, string precio_venta, string tipo, int existencia)
+        public void ActualizarProductos(string id, string descripcion, string precio_venta, string tipo, string existencia)
         {
             Crearconexion();
 

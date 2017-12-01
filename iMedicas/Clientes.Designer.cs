@@ -102,7 +102,7 @@
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(543, 281);
             this.dgvClientes.Style = MetroFramework.MetroColorStyle.Blue;
-            this.dgvClientes.TabIndex = 0;
+            this.dgvClientes.TabIndex = 8;
             this.dgvClientes.Theme = MetroFramework.MetroThemeStyle.Light;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
@@ -146,7 +146,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(85, 101);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(110, 23);
-            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnAgregar.UseSelectable = true;
@@ -177,7 +177,7 @@
             this.txbNombre.SelectionStart = 0;
             this.txbNombre.ShortcutsEnabled = true;
             this.txbNombre.Size = new System.Drawing.Size(110, 23);
-            this.txbNombre.TabIndex = 2;
+            this.txbNombre.TabIndex = 1;
             this.txbNombre.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbNombre.UseSelectable = true;
             this.txbNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -208,7 +208,7 @@
             this.txbTelefono.SelectionStart = 0;
             this.txbTelefono.ShortcutsEnabled = true;
             this.txbTelefono.Size = new System.Drawing.Size(110, 23);
-            this.txbTelefono.TabIndex = 3;
+            this.txbTelefono.TabIndex = 2;
             this.txbTelefono.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbTelefono.UseSelectable = true;
             this.txbTelefono.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -239,7 +239,7 @@
             this.txbDireccion.SelectionStart = 0;
             this.txbDireccion.ShortcutsEnabled = true;
             this.txbDireccion.Size = new System.Drawing.Size(110, 23);
-            this.txbDireccion.TabIndex = 4;
+            this.txbDireccion.TabIndex = 3;
             this.txbDireccion.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbDireccion.UseSelectable = true;
             this.txbDireccion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -270,7 +270,7 @@
             this.txbEmail.SelectionStart = 0;
             this.txbEmail.ShortcutsEnabled = true;
             this.txbEmail.Size = new System.Drawing.Size(110, 23);
-            this.txbEmail.TabIndex = 5;
+            this.txbEmail.TabIndex = 4;
             this.txbEmail.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbEmail.UseSelectable = true;
             this.txbEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -301,7 +301,7 @@
             this.txbId.SelectionStart = 0;
             this.txbId.ShortcutsEnabled = true;
             this.txbId.Size = new System.Drawing.Size(35, 23);
-            this.txbId.TabIndex = 1;
+            this.txbId.TabIndex = 0;
             this.txbId.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbId.UseSelectable = true;
             this.txbId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -312,7 +312,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(229, 101);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(110, 23);
-            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnEliminar.UseSelectable = true;
@@ -373,7 +373,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(373, 101);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(110, 23);
-            this.btnActualizar.TabIndex = 13;
+            this.btnActualizar.TabIndex = 7;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnActualizar.UseSelectable = true;

@@ -37,6 +37,7 @@
             this.Id_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txbPrecio = new MetroFramework.Controls.MetroTextBox();
@@ -55,7 +56,6 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.cbProductos.Location = new System.Drawing.Point(23, 169);
             this.cbProductos.Name = "cbProductos";
             this.cbProductos.Size = new System.Drawing.Size(166, 29);
-            this.cbProductos.TabIndex = 0;
+            this.cbProductos.TabIndex = 4;
             this.cbProductos.UseSelectable = true;
             this.cbProductos.SelectedIndexChanged += new System.EventHandler(this.cbProductos_SelectedIndexChanged);
             // 
@@ -75,7 +75,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(44, 272);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 21;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseSelectable = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -127,7 +127,7 @@
             this.dgvProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(544, 193);
-            this.dgvProductos.TabIndex = 20;
+            this.dgvProductos.TabIndex = 7;
             // 
             // Id_Producto
             // 
@@ -150,6 +150,12 @@
             this.Precio_Producto.HeaderText = "Precio";
             this.Precio_Producto.Name = "Precio_Producto";
             this.Precio_Producto.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // metroLabel3
             // 
@@ -195,7 +201,7 @@
             this.txbPrecio.SelectionStart = 0;
             this.txbPrecio.ShortcutsEnabled = true;
             this.txbPrecio.Size = new System.Drawing.Size(118, 23);
-            this.txbPrecio.TabIndex = 14;
+            this.txbPrecio.TabIndex = 9;
             this.txbPrecio.UseSelectable = true;
             this.txbPrecio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbPrecio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -226,7 +232,7 @@
             this.txbDescripcion.SelectionStart = 0;
             this.txbDescripcion.ShortcutsEnabled = true;
             this.txbDescripcion.Size = new System.Drawing.Size(315, 23);
-            this.txbDescripcion.TabIndex = 13;
+            this.txbDescripcion.TabIndex = 8;
             this.txbDescripcion.UseSelectable = true;
             this.txbDescripcion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbDescripcion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -273,7 +279,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(173, 272);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 28;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -285,7 +291,7 @@
             this.cbClientes.Location = new System.Drawing.Point(23, 106);
             this.cbClientes.Name = "cbClientes";
             this.cbClientes.Size = new System.Drawing.Size(166, 29);
-            this.cbClientes.TabIndex = 29;
+            this.cbClientes.TabIndex = 0;
             this.cbClientes.Theme = MetroFramework.MetroThemeStyle.Light;
             this.cbClientes.UseSelectable = true;
             this.cbClientes.SelectedIndexChanged += new System.EventHandler(this.cbClientes_SelectedIndexChanged);
@@ -315,7 +321,7 @@
             this.txbEmail.SelectionStart = 0;
             this.txbEmail.ShortcutsEnabled = true;
             this.txbEmail.Size = new System.Drawing.Size(129, 23);
-            this.txbEmail.TabIndex = 35;
+            this.txbEmail.TabIndex = 3;
             this.txbEmail.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbEmail.UseSelectable = true;
             this.txbEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -356,7 +362,7 @@
             this.txbDireccion.SelectionStart = 0;
             this.txbDireccion.ShortcutsEnabled = true;
             this.txbDireccion.Size = new System.Drawing.Size(129, 23);
-            this.txbDireccion.TabIndex = 33;
+            this.txbDireccion.TabIndex = 2;
             this.txbDireccion.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbDireccion.UseSelectable = true;
             this.txbDireccion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -397,7 +403,7 @@
             this.txbTelefono.SelectionStart = 0;
             this.txbTelefono.ShortcutsEnabled = true;
             this.txbTelefono.Size = new System.Drawing.Size(129, 23);
-            this.txbTelefono.TabIndex = 31;
+            this.txbTelefono.TabIndex = 1;
             this.txbTelefono.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbTelefono.UseSelectable = true;
             this.txbTelefono.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -430,12 +436,6 @@
             this.metroLabel8.Size = new System.Drawing.Size(128, 19);
             this.metroLabel8.TabIndex = 37;
             this.metroLabel8.Text = "Seleccione Producto";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
             // 
             // Ventas
             // 

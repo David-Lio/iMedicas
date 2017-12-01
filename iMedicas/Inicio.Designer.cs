@@ -39,7 +39,7 @@
             this.btnCotizacion.Location = new System.Drawing.Point(23, 79);
             this.btnCotizacion.Name = "btnCotizacion";
             this.btnCotizacion.Size = new System.Drawing.Size(171, 39);
-            this.btnCotizacion.TabIndex = 1;
+            this.btnCotizacion.TabIndex = 0;
             this.btnCotizacion.Text = "Nueva Venta";
             this.btnCotizacion.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnCotizacion.UseSelectable = true;
@@ -50,7 +50,7 @@
             this.btnClientes.Location = new System.Drawing.Point(23, 199);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(171, 39);
-            this.btnClientes.TabIndex = 3;
+            this.btnClientes.TabIndex = 2;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnClientes.UseSelectable = true;
@@ -61,7 +61,7 @@
             this.btnProductos.Location = new System.Drawing.Point(23, 263);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(171, 39);
-            this.btnProductos.TabIndex = 4;
+            this.btnProductos.TabIndex = 3;
             this.btnProductos.Text = "Productos";
             this.btnProductos.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnProductos.UseSelectable = true;
@@ -72,7 +72,7 @@
             this.btnVentas.Location = new System.Drawing.Point(21, 142);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(171, 39);
-            this.btnVentas.TabIndex = 2;
+            this.btnVentas.TabIndex = 1;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnVentas.UseSelectable = true;

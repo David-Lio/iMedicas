@@ -32,7 +32,7 @@ namespace iMedicas
 
             cbClientes.DataSource = sql.selectSimple("Id_Cliente,Nombre_Cliente", "Cliente");
 
-            x = 1 + sql.ObtenerNumeroVentas();
+            x = 1 + sql.ContadorVentas();
             lblVenta.Text = "Venta Numero: " + x;
 
             cbProductos.ValueMember = "Id_Producto";
@@ -172,7 +172,11 @@ namespace iMedicas
         {
             if (this.dgvProductos.SelectedRows.Count > 0)
             {
-                dgvProductos.Rows.RemoveAt(this.dgvProductos.SelectedRows[0].Index);
+                if(dgvProductos.CurrentRow.Cells[0].Value != null)
+                {
+                    dgvProductos.Rows.RemoveAt(this.dgvProductos.SelectedRows[0].Index);
+                }
+                
             }
         }
 

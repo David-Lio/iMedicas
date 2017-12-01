@@ -42,5 +42,11 @@ namespace iMedicas
             Productos productos = new Productos();
             productos.Show();
         }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            HistorialVentas historialVentas = new HistorialVentas();
+            historialVentas.Show();
+        }
     }
 }

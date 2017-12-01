@@ -40,3 +40,4 @@ C:\iMedicas\iMedicas\obj\Debug\iMedicas.Ventas.resources
 C:\iMedicas\iMedicas\obj\Debug\iMedicas.csproj.GenerateResource.Cache
 C:\iMedicas\iMedicas\obj\Debug\iMedicas.exe.manifest
 C:\iMedicas\iMedicas\obj\Debug\iMedicas.application
+C:\iMedicas\iMedicas\obj\Debug\iMedicas.HistorialVentas.resources

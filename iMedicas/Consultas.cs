@@ -325,7 +325,34 @@ namespace iMedicas
 
         }
 
-        public string ObtenerNumeroVentas()
+        public void CancelarVenta(string Id_Venta)
+        {
+            Crearconexion();
+
+            SqlCommand cmd = new SqlCommand("Update Venta set Estado = @Estado where Id_Venta =" + Id_Venta, conexion);
+            cmd.Parameters.Add("@Estado", System.Data.SqlDbType.VarChar);
+            cmd.Parameters["@Estado"].Value = "Cancelada";
+
+            try
+            {
+                conexion.Open();
+                int filas = cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        public void RegresarExistencias()
+        {
+
+        }
+
+        public string ContadorVentas()
         {
             Crearconexion();
             string query = string.Format("Select Count(Id_Venta) from Venta");
@@ -336,6 +363,19 @@ namespace iMedicas
             conexion.Close();
             return sdr;
         }
+
+        public string ContadorProductos(string Id_Venta)
+        {
+            Crearconexion();
+            string query = string.Format("Select Count("+Id_Venta+") from DetallesVenta where Id_Venta ="+Id_Venta);
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            conexion.Open();
+            string sdr = cmd.ExecuteScalar().ToString();
+            conexion.Close();
+            return sdr;
+        }
+
 
         public DataTable selectSimple(string consulta, string tabla, string condicion ="")
         {
@@ -359,6 +399,18 @@ namespace iMedicas
             string sdr = cmd.ExecuteScalar().ToString();
             conexion.Close();
             return sdr;
+        }
+
+        public DataTable ObtenerVentas()
+        {
+            Crearconexion();
+            conexion.Open();
+            SqlDataAdapter ad = new SqlDataAdapter("select Id_Venta,Nombre_Cliente,Estado,Total from Venta,Cliente where Venta.Id_Cliente = Cliente.Id_Cliente", conexion);
+            SqlCommandBuilder cmd = new SqlCommandBuilder(ad);
+            ds = new DataSet();
+            ad.Fill(ds);
+            conexion.Close();
+            return ds.Tables[0];
         }
 
     }
